@@ -1,0 +1,302 @@
+body {
+  background:
+    url("../imagenes/fondo_nuevo.png") center/contain repeat,
+    linear-gradient(90deg, #505261 0%, #272d49 100%);
+}
+
+.navbar {
+  background: linear-gradient(90deg, #494b53 0%, #272d49 100%);
+}
+
+.navbar .nav-link, .navbar-brand {
+  color: #ffffff !important;
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.navbar-toggler-icon {
+  filter: invert(100%) brightness(200%);
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 40px;      /* ancho base */
+  height: 4px;      /* alto base */
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+  background-color: #ffffff;
+}
+
+.gifedit {
+  box-shadow: 3px 3px 7px rgb(31, 30, 43);
+  filter: grayscale(95%);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.gifedit:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+#trilogia {
+  text-align: justify;
+}
+
+#btnLeerMas {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: 2px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  font-size: 0.9rem;
+  transition: 0.3s ease-in-out;
+}
+
+#btnLeerMas:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
+}
+
+#btnLeerMas::after {
+  content: "Seguir leyendo";
+}
+
+#btnLeerMas:not(.collapsed)::after {
+  content: "Ver menos";
+}
+
+.personaje-card {
+  border: none;
+  background: transparent;
+  max-width: 280px; 
+  width: 100%;
+  margin: 0;
+}
+
+.img-wrap {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+  border-radius: 10px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.75);
+  color: white;
+  padding: 1.2rem;
+  text-align: center;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.6rem;
+  transition: opacity .4s ease;
+}
+
+.hint {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  color: white;
+  padding: 0.4rem;
+  font-size: 0.9rem;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  letter-spacing: 0.3px;
+}
+
+.img-wrap:hover .overlay {
+  opacity: 1;
+}
+
+.img-wrap:hover img {
+  transform: scale(1.08);
+}
+
+.img-wrap:hover .hint {
+  opacity: 0;
+}
+
+.culpmia {
+  background-color: #797b86;
+  text-align: justify;
+  box-shadow: 3px 3px 7px rgb(31, 30, 43);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.culpmia:hover {
+  transform: scale(1.05);
+}
+
+#peliculas .card-text {
+   font-size: 0.95rem;
+  line-height: 1.35;
+  text-align: justify;
+}
+
+#reseñas .card {
+  border: none;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+#reseñasCarrusel .carousel-inner {
+ width: 100%;
+}
+
+#reseñasCarrusel .carousel-control-prev-icon,
+#reseñasCarrusel .carousel-control-next-icon {
+  filter: invert(1);
+}
+
+textarea {
+  resize: none;
+}
+
+footer {
+  background-color: #7c7e88;
+
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+footer a {
+  text-decoration: none !important;
+}
+
+footer a img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+footer a:focus, footer a:active, footer a:visited {
+  text-decoration: none !important;
+}
+
+.datos {
+  margin: 0;
+  color: #524446;
+  font-size: 0.7em;
+}
+
+@media (max-width: 575.98px){
+
+  .carousel-indicators {
+    width: 20px;
+    height: 2px;
+    margin: 0 3px;
+  }
+
+  #trilogia img {
+    width: 90% !important;
+    float: none !important;
+    margin: 0 auto 1.5rem !important;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  } 
+  
+  #personajes .card{
+    max-width: 250px;
+  }
+  #personajes .card-img-top{
+    height: 240px;
+    margin: 0 auto;
+  }
+
+  #personajes .card-img-top {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  #personajes .img-wrap {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  #personajes .hint {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 6px 0;
+    border-radius: 0 0 12px 12px;
+  }
+
+  #peliculas img {
+    margin-bottom: 1rem !important;
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+    border-radius: 1rem;  
+  }
+
+  #peliculas h3 {
+    margin-top: 0.5rem !important; 
+  }
+
+  #reseñas .card {
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 0.4rem !important;
+    border-radius: 10px;
+  }
+  
+
+  #reseñas .card-body {
+     padding: 0.4rem !important;
+  }
+
+  #reseñas h5.card-title {
+    font-size: 0.95rem !important; 
+  }
+
+  #reseñas .card-text {
+    font-size: 0.90rem; 
+    line-height: 1.3;
+  }
+
+  #reseñas img {
+    width: 32px;
+  }
+
+}
+
+
+
+@media (min-width: 1200px){
+  #personajes .card{
+    max-width: 260px;
+  }
+}
